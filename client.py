@@ -62,7 +62,7 @@ class MCPClient:
         tools = response.tools  # Extract the tool list from the response
 
         # Print a message showing the names of the tools available on the server
-        print("\nConnected to server with tools:", [tool.name for tool in tools])
+        print("\nConnected to server with tools:", [tool for tool in tools])
 
         # Convert MCP tools to Gemini format
         self.function_declarations = convert_mcp_tools_to_gemini(tools)
