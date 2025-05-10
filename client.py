@@ -27,7 +27,6 @@ class MCPClient:
         self.session: Optional[ClientSession] = None  # MCP session for communication
         self.exit_stack = AsyncExitStack()  # Manages async resource cleanup
 
-        # Retrieve the Gemini API key from environment variables
         gemini_api_key = os.getenv("GEMINI_API_KEY")
         if not gemini_api_key:
             raise ValueError("GEMINI_API_KEY not found. Please add it to your .env file.")
